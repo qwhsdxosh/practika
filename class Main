@@ -1,0 +1,14 @@
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        Message msq1 = new Message(new Date(),
+                "Привет, как дела?");
+        Chat chat = new Chat(new Message[]{msq1});
+        Message[] chatMessages = chat.getMessages();
+        for (Message message : chatMessages) {
+            System.out.println("Дата сообщения:" + message.getMessageDate());
+            System.out.println("Текст сообщения:" + message.getText());
+        }
+    }
+}
