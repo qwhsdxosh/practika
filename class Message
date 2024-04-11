@@ -1,0 +1,28 @@
+import java.util.Date;
+
+ class Message {
+    private Date messageDate;
+    private String text;
+    public Message (Date messageDate,String text) {
+        this.messageDate = messageDate;
+        this.text = text;
+    }
+    public Date getMessageDate() {
+
+        return messageDate;
+    }
+
+    public void setMessageDate(Date messageDate) {
+
+        this.messageDate = messageDate;
+    }
+
+     public String getText() {
+         return text;
+     }
+
+     public void setText(String text) {
+
+        this.text = text;
+    }
+}
