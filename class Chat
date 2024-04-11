@@ -1,0 +1,17 @@
+class Chat {
+    private Message[] messages;
+
+    public Chat(Message[] messages) {
+
+        this.messages = messages;
+    }
+
+    public Message[] getMessages() {
+
+        return messages;
+    }
+
+    public void setMessages(Message[] messages) {
+        this.messages = messages;
+    }
+}
