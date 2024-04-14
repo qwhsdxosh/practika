@@ -1,0 +1,21 @@
+import java.util.Date;
+class Message {
+    private int chatId;
+    private String author;
+    private Date date;
+    private String text;
+
+    public Message(int chatId, String author, Date date, String text) {
+        this.chatId = chatId;
+        this.author = author;
+        this.date = date;
+        this.text = text;
+    }
+
+    public void displayMessage() {
+        System.out.println("Chat ID: " + chatId);
+        System.out.println("Author: " + author);
+        System.out.println("Date: " + date);
+        System.out.println("Text: " + text);
+    }
+}
