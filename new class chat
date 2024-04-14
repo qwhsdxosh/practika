@@ -1,0 +1,20 @@
+class Chat {
+    private int chatId;
+    private String chatName;
+    private String[] participants;
+
+    public Chat(int chatId, String chatName, String[] participants) {
+        this.chatId = chatId;
+        this.chatName = chatName;
+        this.participants = participants;
+    }
+
+    public void displayChatInfo() {
+        System.out.println("Chat ID: " + chatId);
+        System.out.println("Chat Name: " + chatName);
+        System.out.println("Participants: ");
+        for (String participant : participants) {
+            System.out.println(participant);
+        }
+    }
+}
