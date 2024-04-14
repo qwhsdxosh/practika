@@ -1,0 +1,12 @@
+import java.util.Date;
+public class Main {
+    public static void main(String[] args) {
+        String[] participants = {"Лиза", "Карина"};
+        Chat chat = new Chat(1,"Личные сообщения", participants);
+        chat.displayChatInfo();
+        Message message = new Message(1, "Лиза", new Date(),"Привет,Каринааа! Как дела?");
+        message.displayMessage();
+        message = new Message(1, "Карина", new Date(), "Привееет! У меня всё хорошо! У тебя как дела?");
+        message.displayMessage();
+    }
+}
