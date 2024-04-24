@@ -1,0 +1,51 @@
+package view.console;
+
+import model.Chat;
+import model.Message;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // todo Реализауия взаимодействия с пользователем
+
+        // Регистрация
+        System.out.println("Введите имя пользователя:");
+        Scanner scanner;
+        String username = scanner.nextLine();
+        System.out.println("Введите пароль:");
+        String password = scanner.nextLine();
+        users.put(username, password);
+
+        // Авторизация
+        System.out.println("Введите имя пользователя для входа:");
+        username = scanner.nextLine();
+        System.out.println("Введите пароль для входа:");
+        password = scanner.nextLine();
+        if (!users.containsKey(username) || !users.get(username).equals(password)) {
+            System.out.println("Неверное имя пользователя или пароль.");
+            return;
+        }
+        // Начало диалога
+        System.out.println("Вы авторизованы как " + username);
+        System.out.println("Введите имя пользователя, с которым хотите начать диалог:");
+        String otherUsername = scanner.nextLine();
+        if (!users.containsKey(otherUsername)) {
+            System.out.println("Пользователь с таким именем не найден.");
+            return;
+        }
+
+        // Диалог
+        while (true) {
+            System.out.println("Введите сообщение:");
+            String message = scanner.nextLine();
+            if (message.equals("exit")) {
+                break;
+            }
+            System.out.println("Пользователь " + otherUsername + " получил сообщение: " + message);
+        }
+
+        System.out.println("Диалог завершен.");
+    }
+}
